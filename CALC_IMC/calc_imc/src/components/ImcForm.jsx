@@ -22,8 +22,10 @@ const ImcForm = () => {
             name='weight' 
             placeholder='Exemplo: 70,5'
             />
-            <Button name={"Calcular"}/>
-            <Button name={"Limpar"}/>
+            <div className="action-control">
+            <Button id="calc-btn" name={"Calcular"}/>
+            <Button id="clear-btn" name={"Limpar"}/>
+            </div>
           </form>
         </div>
     </div>

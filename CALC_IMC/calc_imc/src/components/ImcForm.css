@@ -1,6 +1,6 @@
 .container-form{
     width: 400px;
-    height: 500px;
+    height: 400px;
     border-radius: 5px;
     background-color: #1D1E33;
 }
@@ -25,4 +25,9 @@
     border-radius: 5px;
     font-size: 18px;
     margin: 8px 0;
+}
+.action-control{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
 }
