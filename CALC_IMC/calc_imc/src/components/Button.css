@@ -9,6 +9,13 @@
     font-size: 16px;
     border-radius: 5px;
     border: none;
+    transition: 0.3s;
+}
+#calc-btn:hover{
+    opacity: 1;
+}
+#clear-btn:hover{
+    opacity: 1;
 }
 #calc-btn{
     background-color: #DF3F36;
