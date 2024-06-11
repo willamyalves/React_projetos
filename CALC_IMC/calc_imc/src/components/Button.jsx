@@ -1,8 +1,16 @@
 import './Button.css'
 
-const Button = ({id, name}) => {
+const Button = ({id, name, action}) => {
+
+  const handleAction = (e) =>{
+    action(e);
+  }
+
   return (
-    <button id={id}>{name}</button>
+    <button 
+    id={id}
+    onClick={handleAction}
+    >{name}</button>
   )
 }
 
