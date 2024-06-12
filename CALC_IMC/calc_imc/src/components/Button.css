@@ -1,4 +1,4 @@
-#clear-btn, #calc-btn{
+#clear-btn, #calc-btn, #back-btn{
     width: 45%;
     height: 55px;
     text-transform: uppercase;
@@ -17,9 +17,12 @@
 #clear-btn:hover{
     opacity: 1;
 }
-#calc-btn{
+#calc-btn, #back-btn{
     background-color: #DF3F36;
 }
 #clear-btn{
     background-color: #404042;
+}
+#back-btn:hover{
+    opacity: 1;
 }

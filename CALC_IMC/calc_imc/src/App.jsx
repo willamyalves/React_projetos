@@ -17,11 +17,13 @@ function App() {
     const imcValue = (weight / (heightNumber * heightNumber)).toFixed(1);
     
     setImc(imcValue);
+
+    console.log(imcValue);
   }
 
   return (
     <div className='container'>
-        { !imc ? <ImcForm calcImc={calcImc}/> : <ResultForm/>}
+        { !imc ? <ImcForm calcImc={calcImc}/> : <ResultForm imc={imc} setImc={setImc}/>}
     </div>
   )
 }
