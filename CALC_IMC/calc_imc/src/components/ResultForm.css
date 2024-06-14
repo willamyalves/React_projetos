@@ -46,5 +46,17 @@
     margin-top: 20px;
 }
 .yellow{
-    color: rgb(212, 212, 19);
+    color: rgb(212, 199, 19);
+}
+.green{
+    color: rgb(24, 167, 24);
+}
+.dark-yellow{
+    color: rgb(146, 132, 0);
+}
+.orange{
+    color: rgb(245, 159, 0);
+}
+.red{
+    color: rgba(255, 32, 32, 0.932);
 }

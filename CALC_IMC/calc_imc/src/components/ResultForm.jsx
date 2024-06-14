@@ -1,6 +1,5 @@
-import Button from './Button'
-import { useState } from 'react'
-import './ResultForm.css'
+import Button from './Button';
+import './ResultForm.css';
 
 const ResultForm = ({imc, setImc}) => {
 
@@ -9,20 +8,32 @@ const ResultForm = ({imc, setImc}) => {
    setImc("");
   }
 
-  const getColorClass = () => {
+  const getInfo = () => {
     if (imc < 18.5) {
-      return "yellow";
+      return {situation: "Magreza", color: "yellow"};
+    } 
+      else if (imc >= 18.5 && imc < 24.9) {
+      return { situation: "Normal", color: "green" };
+
+    } else if (imc >= 24.9 && imc < 29.9) {
+      return { situation: "Sobrepeso", color: "dark-yellow" };
+
+    } else if (imc >= 30 && imc < 39.9) {
+      return { situation: "Obesidade", color: "orange" };
+
+    } else if (imc >= 40) {
+      return { situation: "Obesidade grave", color: "red" };
+
+    } else {
+      return { situation: "", color: "" };
     }
-    return "";
   }
-
-
 
 
   return (
     <div className="container-result">
-        <h2>Seu IMC: <span className={`imc-span ${getColorClass()}`}>{imc}</span></h2>
-        <p className='content-situation'>Situação atual: </p>
+        <h2>Seu IMC: <span className={`imc-span ${getInfo().color}`}>{imc}</span></h2>
+        <p className='content-situation'>Situação atual: <span className={getInfo().color}>{getInfo().situation}</span></p>
         <h3 className='watch-classifications'>Confira as classificações</h3>
         <div className="imcTable">
           <div className='titles'>
