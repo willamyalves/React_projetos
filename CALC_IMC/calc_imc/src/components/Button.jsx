@@ -10,7 +10,8 @@ const Button = ({id, name, action}) => {
     <button 
     id={id}
     onClick={handleAction}
-    >{name}</button>
+    >{name}
+    </button>
   )
 }
 
