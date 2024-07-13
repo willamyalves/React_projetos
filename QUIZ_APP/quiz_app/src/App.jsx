@@ -1,9 +1,14 @@
+// Components
+import Welcome from "./components/Welcome";
+
+// Estatics
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Quiz App</h1>
+      <h1>Quiz de programação</h1>
+      <Welcome />
     </div>
   );
 }
