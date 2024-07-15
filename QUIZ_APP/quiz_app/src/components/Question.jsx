@@ -1,3 +1,6 @@
+// Components
+import Option from "./Option.jsx";
+
 // Context
 import { useContext } from "react";
 
@@ -11,6 +14,13 @@ const Question = () => {
 
   const currentQuestion = quizState.questions[quizState.currentQuestion];
 
+  const onSelectOption = (option) => {
+    dispatch({
+      type: "CHECK_ANSWER",
+      payload: { answer: currentQuestion.answer, option },
+    });
+  };
+
   return (
     <div id="question">
       <p>
@@ -18,11 +28,20 @@ const Question = () => {
       </p>
       <h2>{currentQuestion.question}</h2>
       <div id="options-container">
-        <p>Opções</p>
+        {currentQuestion.options.map((option) => (
+          <Option
+            option={option}
+            key={option}
+            selectOption={() => onSelectOption(option)}
+            answer={currentQuestion.answer}
+          />
+        ))}
       </div>
-      <button onClick={() => dispatch({ type: "CHANGE_QUESTION" })}>
-        Continuar
-      </button>
+      {quizState.answerSelected && (
+        <button onClick={() => dispatch({ type: "CHANGE_QUESTION" })}>
+          Continuar
+        </button>
+      )}
     </div>
   );
 };
