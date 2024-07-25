@@ -1,13 +1,17 @@
+//Router
+import { Outlet } from "react-router-dom";
+
+// IMG
+import NewYear from "./assets/newyear.jpg";
+
+// CSS
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundImage: `url(${NewYear})` }}>
       <div className="container">
-        <h1>title</h1>
-        <div className="countdown-container">
-          <p>2 dias</p>
-        </div>
+        <Outlet />
       </div>
     </div>
   );
