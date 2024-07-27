@@ -1,9 +1,11 @@
-// Context , React
-import { useContext, useState } from "react";
-import { CountdownContext } from "../context/CountdownContext.jsx";
+// React
+import { useState } from "react";
 
 // Router
 import { useNavigate } from "react-router-dom";
+
+// Hooks
+import { useCountdownContext } from "../hooks/useCountdownContext";
 
 // CSS
 import "./Home.css";
@@ -16,7 +18,7 @@ const Home = () => {
   const [intervalDateFlux, setIntervalDateFlux] = useState(false);
 
   const navigate = useNavigate();
-  const { setEvent } = useContext(CountdownContext);
+  const { setEvent } = useCountdownContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();

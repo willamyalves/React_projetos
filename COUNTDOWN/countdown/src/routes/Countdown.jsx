@@ -2,9 +2,8 @@
 import Title from "../components/Title";
 import Counter from "../components/Counter";
 
-// Context
-import { CountdownContext } from "../context/CountdownContext";
-import { useContext } from "react";
+// Hooks
+import { useCountdownContext } from "../hooks/useCountdownContext";
 
 // Router
 import { Navigate } from "react-router-dom";
@@ -13,7 +12,7 @@ import { Navigate } from "react-router-dom";
 import useCountdown from "../hooks/useCountdown";
 
 const Countdown = () => {
-  const { event } = useContext(CountdownContext);
+  const { event } = useCountdownContext();
 
   if (!event) return <Navigate to="/" />;
 

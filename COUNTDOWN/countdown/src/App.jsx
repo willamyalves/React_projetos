@@ -1,9 +1,8 @@
 //Router
 import { Outlet } from "react-router-dom";
 
-// Context
-import { useContext } from "react";
-import { CountdownContext } from "./context/CountdownContext.jsx";
+// Hooks
+import { useCountdownContext } from "./hooks/useCountdownContext.jsx";
 
 // IMG
 import NewYear from "./assets/newyear.jpg";
@@ -12,7 +11,7 @@ import NewYear from "./assets/newyear.jpg";
 import "./App.css";
 
 function App() {
-  const { event } = useContext(CountdownContext);
+  const { event } = useCountdownContext();
 
   let eventImage = null;
 
