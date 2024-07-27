@@ -1,12 +1,20 @@
+// React
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
-import "./index.css";
 
+// Component
+import App from "./App.jsx";
 import Home from "./routes/Home.jsx";
 import Countdown from "./routes/Countdown.jsx";
 
+// Route
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+// Context
+import { CountdownProvider } from "./context/CountdownContext.jsx";
+
+// CSS
+import "./index.css";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +35,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <CountdownProvider>
+      <RouterProvider router={router} />
+    </CountdownProvider>
   </React.StrictMode>
 );

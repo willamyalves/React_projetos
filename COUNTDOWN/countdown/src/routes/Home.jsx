@@ -1,13 +1,22 @@
-import { useState } from "react";
+// Context , React
+import { useContext, useState } from "react";
+import { CountdownContext } from "../context/CountdownContext.jsx";
+
+// Router
+import { useNavigate } from "react-router-dom";
 
 // CSS
 import "./Home.css";
 
 const Home = () => {
-  const [title, setTitle] = useState();
-  const [date, setDate] = useState();
-  const [image, setImage] = useState();
-  const [color, setColor] = useState();
+  const [title, setTitle] = useState("");
+  const [date, setDate] = useState("");
+  const [image, setImage] = useState("");
+  const [color, setColor] = useState("");
+  const [intervalDateFlux, setIntervalDateFlux] = useState(false);
+
+  const navigate = useNavigate();
+  const { setEvent } = useContext(CountdownContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,7 +28,24 @@ const Home = () => {
       color,
     };
 
-    console.log(eventObject);
+    const currentDate = new Date().getTime();
+
+    const selectedDate = new Date(date).getTime();
+
+    const intervalDate = selectedDate - currentDate;
+
+    if (intervalDate < 0) {
+      setIntervalDateFlux(true);
+
+      setTimeout(() => {
+        setIntervalDateFlux(false);
+      }, 5000);
+
+      return;
+    }
+
+    setEvent(eventObject);
+    navigate("/countdown");
   };
 
   return (
@@ -64,6 +90,13 @@ const Home = () => {
           />
         </label>
         <input type="submit" value="Criar" />
+        {intervalDateFlux ? (
+          <p style={{ color: "red", fontWeight: "bold" }}>
+            Preencha uma data válida
+          </p>
+        ) : (
+          ""
+        )}
       </form>
     </div>
   );
