@@ -1,22 +1,21 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-export function useForm(steps){
+export function useForm(steps) {
+  const [currentStep, setCurrentStep] = useState(0);
 
-    const [currentStep, setCurrentStep] = useState(0);
+  const changeStep = (i, e) => {
+    if (e) e.preventDefault();
 
-    const changeStep = (i, e)=>{
-        if (e) e.preventDefault();
+    if (i < 0 || i >= steps.length) return;
 
-        if(i < 0 || i >= steps.length) return;
+    setCurrentStep(i);
+  };
 
-        setCurrentStep(i);
-    }
-
-    return {
-        currentStep,
-        currentComponent: steps[currentStep],
-        changeStep,
-        isLastStep: currentStep + 1 === steps.length ? true : false,
-        isFirstStep: currentStep === 0 ? true : false
-    }
+  return {
+    currentStep,
+    currentComponent: steps[currentStep],
+    changeStep,
+    isLastStep: currentStep + 1 === steps.length ? true : false,
+    isFirstStep: currentStep === 0 ? true : false,
+  };
 }
