@@ -1,13 +1,11 @@
-Aqui está a explicação sobre como funciona o **IMC Calculator App**:
+### **Estrutura Geral**
+O **IMC Calculator App** permite ao usuário calcular o Índice de Massa Corporal (IMC) com base na altura e peso fornecidos. A aplicação exibe o valor do IMC calculado e sua classificação (Magreza, Normal, Sobrepeso, etc.), conforme a tabela de classificação da OMS.
 
 # Calculadora de IMC
 ![calc-imc-image](./public/calc-imc-image.png)
 
 # Resultado calculadora de IMC
 ![calc-imc-image](./public/calc-imc-image2.png)
-
-### **Estrutura Geral**
-O **IMC Calculator App** permite ao usuário calcular o Índice de Massa Corporal (IMC) com base na altura e peso fornecidos. A aplicação exibe o valor do IMC calculado e sua classificação (Magreza, Normal, Sobrepeso, etc.), conforme a tabela de classificação da OMS.
 
 ### **Fluxo de Funcionamento**
 
