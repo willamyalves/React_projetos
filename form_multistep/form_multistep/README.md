@@ -1,8 +1,8 @@
 # Multi Step Form
 
-![Multistepform-print](./public/multistep-form-print.png)
-
 Este projeto é um formulário multi-step, criado para coletar informações do usuário, realizar uma avaliação de um produto e finalizar com uma mensagem de agradecimento e um resumo. Cada etapa é apresentada de forma dinâmica, onde o usuário pode avançar e voltar entre os passos até concluir o processo. Abaixo, explico como cada parte do código funciona.
+
+![Multistepform-print](./public/multistep-form-print.png)
 
 ## Estrutura do Projeto
 
