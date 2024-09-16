@@ -1,11 +1,11 @@
-# Seleção de tema:
-![Selecao-de-tema](./public/quiz-print1.png)
-
-# Quiz:
-![Selecao-de-tema](./public/quiz-print2.png)
-
 ### **Estrutura Geral**
 O **Quiz App** é uma aplicação de perguntas e respostas sobre programação, onde o usuário pode escolher uma categoria de perguntas (HTML, CSS, ou JavaScript) e responder a uma série de questões. O app registra a pontuação e exibe um resumo no final.
+
+#### Seleção de tema:
+![Selecao-de-tema](./public/quiz-print1.png)
+
+#### Quiz:
+![Selecao-de-tema](./public/quiz-print2.png)
 
 ### **Fluxo de Funcionamento**
 
