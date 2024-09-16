@@ -1,8 +1,9 @@
 # Projeto: Blog with Axios
+Este projeto é um simples blog que utiliza a biblioteca **Axios** para fazer requisições HTTP a uma API de posts, permitindo criar, listar, editar e excluir posts. A navegação entre as páginas é gerenciada utilizando o **React Router**.
 
 ![blog-with-axios](./public/blog-with-axios.png)
 
-Este projeto é um simples blog que utiliza a biblioteca **Axios** para fazer requisições HTTP a uma API de posts, permitindo criar, listar, editar e excluir posts. A navegação entre as páginas é gerenciada utilizando o **React Router**.
+
 
 ## Estrutura do Projeto
 
